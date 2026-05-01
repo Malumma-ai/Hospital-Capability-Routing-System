@@ -20,50 +20,111 @@ st.set_page_config(
 st.markdown("""
 <style>
     * { margin: 0; padding: 0; }
+
     .stApp {
-        background: linear-gradient(135deg, #F8FAFC 0%, #2563EB 100%);
-        color: #333;
+        background: linear-gradient(135deg, #0EA5A4 0%, #3B82F6 100%);
+        color: #1F2937;
     }
-    h1 { color: #fff; text-align: center; font-size: 3em; text-shadow: 2px 2px 4px rgba(0,0,0,0.3); margin: 20px 0; }
-    h2 { color: #667eea; font-size: 1.8em; margin: 15px 0; }
-    h3 { color: #764ba2; font-size: 1.4em; margin: 10px 0; }
-    .stContainer { background: white; border-radius: 15px; padding: 20px; margin: 10px 0; box-shadow: 0 4px 15px rgba(0,0,0,0.2); }
-    .stForm { background: rgba(255,255,255,0.95); border-radius: 15px; padding: 20px; }
+
+    h1 {
+        color: #FFFFFF;
+        text-align: center;
+        font-size: 3em;
+        text-shadow: 2px 2px 4px rgba(0,0,0,0.25);
+        margin: 20px 0;
+    }
+
+    h2 {
+        color: #0F766E;
+        font-size: 1.8em;
+        margin: 15px 0;
+        font-weight: 700;
+    }
+
+    h3 {
+        color: #2563EB;
+        font-size: 1.4em;
+        margin: 10px 0;
+        font-weight: 600;
+    }
+
+    .stContainer {
+        background: white;
+        border-radius: 15px;
+        padding: 20px;
+        margin: 10px 0;
+        box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    }
+
+    .stForm {
+        background: rgba(255,255,255,0.95);
+        border-radius: 15px;
+        padding: 20px;
+    }
+
     .stButton > button {
-        background: linear-gradient(135deg, #F8FAFC 0%, #2563EB 100%);
+        background: linear-gradient(135deg, #0EA5A4 0%, #2563EB 100%);
         color: white;
         border: none;
         border-radius: 10px;
         padding: 12px 30px;
-        font-size: 1.1em;
+        font-size: 1.05em;
         font-weight: bold;
-        box-shadow: 0 4px 15px rgba(102, 126, 234, 0.4);
+        box-shadow: 0 4px 15px rgba(37, 99, 235, 0.25);
         transition: all 0.3s ease;
     }
+
     .stButton > button:hover {
         transform: translateY(-2px);
-        box-shadow: 0 6px 20px rgba(102, 126, 234, 0.6);
+        box-shadow: 0 6px 18px rgba(37, 99, 235, 0.35);
     }
+
     .stTextInput > div > div > input,
     .stNumberInput > div > div > input,
     .stSelectbox > div > div > select,
     .stTextArea > div > div > textarea {
-        border: 2px solid #667eea !important;
+        border: 2px solid #0EA5A4 !important;
         border-radius: 8px !important;
         padding: 10px !important;
+        color: #1F2937 !important;
     }
-    .stSuccess { background: #d4edda; color: #155724; border: 2px solid #28a745; border-radius: 10px; }
-    .stError { background: #f8d7da; color: #721c24; border: 2px solid #f5c6cb; border-radius: 10px; }
-    .stWarning { background: #fff3cd; color: #856404; border: 2px solid #ffc107; border-radius: 10px; }
-    .stInfo { background: #d1ecf1; color: #0c5460; border: 2px solid #bee5eb; border-radius: 10px; }
+
+    .stSuccess {
+        background: #DCFCE7;
+        color: #166534;
+        border: 2px solid #22C55E;
+        border-radius: 10px;
+    }
+
+    .stError {
+        background: #FEE2E2;
+        color: #991B1B;
+        border: 2px solid #EF4444;
+        border-radius: 10px;
+    }
+
+    .stWarning {
+        background: #FEF3C7;
+        color: #92400E;
+        border: 2px solid #F59E0B;
+        border-radius: 10px;
+    }
+
+    .stInfo {
+        background: #DBEAFE;
+        color: #1D4ED8;
+        border: 2px solid #60A5FA;
+        border-radius: 10px;
+    }
+
     .metric-card {
-        background: linear-gradient(135deg, #F8FAFC 0%, #2563EB 100%);
+        background: linear-gradient(135deg, #0EA5A4 0%, #2563EB 100%);
         color: white;
         padding: 20px;
-        border-radius: 10px;
+        border-radius: 12px;
         margin: 10px;
         text-align: center;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        box-shadow: 0 4px 15px rgba(0,0,0,0.18);
     }
 </style>
 """, unsafe_allow_html=True)
