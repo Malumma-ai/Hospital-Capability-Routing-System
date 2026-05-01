@@ -17,114 +17,180 @@ st.set_page_config(
 )
 
 # Custom styling with colors
+
 st.markdown("""
 <style>
-    * { margin: 0; padding: 0; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
 
+    /* MAIN APP BACKGROUND */
     .stApp {
-        background: linear-gradient(135deg, #0EA5A4 0%, #3B82F6 100%);
-        color: #1F2937;
+        background: linear-gradient(135deg, #0F766E 0%, #2563EB 100%);
+        color: #111827;
     }
 
+    /* MAIN PAGE HEADINGS ON BLUE BACKGROUND */
     h1 {
         color: #FFFFFF;
         text-align: center;
         font-size: 3em;
-        text-shadow: 2px 2px 4px rgba(0,0,0,0.25);
+        font-weight: 800;
         margin: 20px 0;
+        text-shadow: 0 2px 6px rgba(0,0,0,0.35);
     }
 
     h2 {
-        color: #0F766E;
-        font-size: 1.8em;
-        margin: 15px 0;
+        color: #FFFFFF;
+        font-size: 1.9em;
         font-weight: 700;
+        margin: 14px 0;
     }
 
     h3 {
-        color: #2563EB;
-        font-size: 1.4em;
-        margin: 10px 0;
-        font-weight: 600;
+        color: #FFFFFF;
+        font-size: 1.45em;
+        font-weight: 700;
+        margin: 12px 0;
     }
 
+    h4 {
+        color: #111827;
+        font-size: 1.15em;
+        font-weight: 700;
+    }
+
+    p, li, label, span, div {
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    /* WHITE CONTENT CARDS */
     .stContainer {
-        background: white;
+        background: #FFFFFF;
         border-radius: 15px;
         padding: 20px;
         margin: 10px 0;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+        box-shadow: 0 4px 15px rgba(0,0,0,0.18);
+        color: #111827;
     }
 
     .stForm {
-        background: rgba(255,255,255,0.95);
+        background: rgba(255,255,255,0.97);
         border-radius: 15px;
         padding: 20px;
+        color: #111827;
     }
 
+    /* BUTTONS */
     .stButton > button {
-        background: linear-gradient(135deg, #0EA5A4 0%, #2563EB 100%);
-        color: white;
+        background: linear-gradient(135deg, #0F766E 0%, #2563EB 100%);
+        color: #FFFFFF;
         border: none;
         border-radius: 10px;
         padding: 12px 30px;
-        font-size: 1.05em;
-        font-weight: bold;
-        box-shadow: 0 4px 15px rgba(37, 99, 235, 0.25);
-        transition: all 0.3s ease;
+        font-size: 1.08em;
+        font-weight: 700;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.20);
+        transition: all 0.25s ease;
     }
 
     .stButton > button:hover {
         transform: translateY(-2px);
-        box-shadow: 0 6px 18px rgba(37, 99, 235, 0.35);
+        box-shadow: 0 6px 16px rgba(0,0,0,0.25);
     }
 
+    /* INPUTS */
     .stTextInput > div > div > input,
     .stNumberInput > div > div > input,
     .stSelectbox > div > div > select,
     .stTextArea > div > div > textarea {
-        border: 2px solid #0EA5A4 !important;
+        border: 2px solid #0F766E !important;
         border-radius: 8px !important;
         padding: 10px !important;
-        color: #1F2937 !important;
+        background: #FFFFFF !important;
+        color: #111827 !important;
+        font-size: 1rem !important;
+        font-weight: 500 !important;
     }
 
+    /* SUCCESS BOXES (FIRST AID) */
     .stSuccess {
-        background: #DCFCE7;
-        color: #166534;
-        border: 2px solid #22C55E;
-        border-radius: 10px;
+        background: #ECFDF5 !important;
+        color: #065F46 !important;
+        border: 2px solid #10B981 !important;
+        border-radius: 12px !important;
+        font-weight: 600 !important;
+        padding: 12px !important;
     }
 
+    /* ERROR BOXES (DO NOT) */
     .stError {
-        background: #FEE2E2;
-        color: #991B1B;
-        border: 2px solid #EF4444;
-        border-radius: 10px;
+        background: #FEF2F2 !important;
+        color: #991B1B !important;
+        border: 2px solid #EF4444 !important;
+        border-radius: 12px !important;
+        font-weight: 600 !important;
+        padding: 12px !important;
     }
 
+    /* WARNING BOXES */
     .stWarning {
-        background: #FEF3C7;
-        color: #92400E;
-        border: 2px solid #F59E0B;
-        border-radius: 10px;
+        background: #FFFBEB !important;
+        color: #92400E !important;
+        border: 2px solid #F59E0B !important;
+        border-radius: 12px !important;
+        font-weight: 600 !important;
+        padding: 12px !important;
     }
 
+    /* INFO BOXES */
     .stInfo {
-        background: #DBEAFE;
-        color: #1D4ED8;
-        border: 2px solid #60A5FA;
-        border-radius: 10px;
+        background: #EFF6FF !important;
+        color: #1E3A8A !important;
+        border: 2px solid #60A5FA !important;
+        border-radius: 12px !important;
+        font-weight: 600 !important;
+        padding: 12px !important;
     }
 
+    /* TOP FEATURE / METRIC CARDS */
     .metric-card {
-        background: linear-gradient(135deg, #0EA5A4 0%, #2563EB 100%);
-        color: white;
-        padding: 20px;
+        background: linear-gradient(135deg, #0F766E 0%, #2563EB 100%);
+        color: #FFFFFF;
+        padding: 22px;
         border-radius: 12px;
         margin: 10px;
         text-align: center;
-        box-shadow: 0 4px 15px rgba(0,0,0,0.18);
+        box-shadow: 0 4px 14px rgba(0,0,0,0.20);
+    }
+
+    .metric-card h3,
+    .metric-card p {
+        color: #FFFFFF !important;
+    }
+
+    /* STREAMLIT METRICS */
+    [data-testid="metric-container"] {
+        background: #FFFFFF;
+        border-radius: 12px;
+        padding: 12px;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.12);
+    }
+
+    /* LINKS */
+    a {
+        color: #FFFFFF !important;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    /* MOBILE */
+    @media (max-width: 768px) {
+        h1 { font-size: 2.2em; }
+        h2 { font-size: 1.5em; }
+        h3 { font-size: 1.2em; }
+        .stButton > button {
+            width: 100%;
+        }
     }
 </style>
 """, unsafe_allow_html=True)
