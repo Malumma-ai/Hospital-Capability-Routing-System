@@ -18,12 +18,13 @@ st.set_page_config(
 
 # Custom styling with colors
 
-st.markdown("<h3 style='text-align: center;'>Malụmma</h3>", unsafe_allow_html=True)
+# Brand (top)
+st.markdown("<h2 style='text-align: center; margin-bottom: 5px;'>Malụmma</h2>", unsafe_allow_html=True)
 
-st.markdown("<h1 style='text-align: center;'>Hospital Capability Routing System</h1>", unsafe_allow_html=True)
+# HCRS logo (directly under it)
+st.markdown("<p style='text-align: center; font-size: 18px;'>🏥 HCRS</p>", unsafe_allow_html=True)
 
-st.markdown("<p style='text-align: center;'>Find the right hospital based on your condition and location</p>", unsafe_allow_html=True)
-
+# Small spacing
 st.markdown("<br>", unsafe_allow_html=True)
 
 st.markdown("""
