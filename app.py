@@ -18,16 +18,18 @@ st.set_page_config(
 
 # Custom styling with colors
 
-# Brand (top)
-st.markdown("<h2 style='text-align: center; margin-bottom: 5px;'>Malụmma</h2>", unsafe_allow_html=True)
-
-# HCRS logo (directly under it)
-st.markdown("<p style='text-align: center; font-size: 18px;'>🏥 HCRS</p>", unsafe_allow_html=True)
-
-# Small spacing
-st.markdown("<br>", unsafe_allow_html=True)
-
 st.markdown("""
+<div style='text-align: center; margin-top: -80px;'>
+
+    <h1 style='color: white; font-weight: 800; margin-bottom: 5px;'>
+        Malụmma
+    </h1>
+
+    <img src='YOUR_LOGO_URL_OR_PATH' width='90' style='margin-top: 0px;'/>
+
+</div>
+""", unsafe_allow_html=True)
+
 <style>
     * { margin: 0; padding: 0; box-sizing: border-box; }
 
