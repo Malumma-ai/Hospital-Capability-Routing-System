@@ -16,7 +16,7 @@ st.set_page_config(
     initial_sidebar_state="collapsed"
 )
 st.title("Malụmma")
-st.subheader("Hospital Capability Routing System:)
+st.subheader("Hospital Capability Routing System")
 
 # Custom styling with colors
 
